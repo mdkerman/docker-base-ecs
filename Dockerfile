@@ -9,7 +9,9 @@ FROM ubuntu:trusty
 
 ENV DEBIAN_FRONTEND noninteractive
 
-# Base packages
+# Update base packages
+RUN apt-get update
+RUN apt-get --yes dist-upgrade
 RUN apt-get --yes install wget tar unzip git supervisor python python-pip python-setuptools python-software-properties
 
 # Socket directory for runtime decryption services - see https://github.com/barchart/crypter
