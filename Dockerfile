@@ -6,6 +6,7 @@
 #
 
 FROM ubuntu:trusty
+MAINTAINER Jeremy Jongsma "jeremy@barchart.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
