@@ -16,4 +16,4 @@ RUN apt-get --yes install wget tar unzip git supervisor python python-pip python
 # This will only be mapped for trusted containers
 VOLUME ["/var/run/crypter"]
 ADD etc/crypter /etc/
-RUN pip install crypter
+RUN pip install crypter boto
