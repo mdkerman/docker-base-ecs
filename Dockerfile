@@ -1,6 +1,8 @@
 #
 # Base Ubuntu image for Barchart applications.
 #
+# docker-build properties:
+# TAG=barchart/base
 
 FROM ubuntu:trusty
 MAINTAINER Jeremy Jongsma "jeremy@barchart.com"
