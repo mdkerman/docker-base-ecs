@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get --yes update && \
 	apt-get --yes install wget tar unzip git supervisor python python-pip python-setuptools software-properties-common && \
 	apt-get clean && \
-	pip install crypter boto
+	pip install crypter boto awscli
 
 # Runtime decryption services - see https://github.com/barchart/crypter
 # This will only be mapped for trusted containers
