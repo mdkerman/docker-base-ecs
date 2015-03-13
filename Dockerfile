@@ -15,6 +15,8 @@ RUN apt-get --yes update && \
 	apt-get clean && \
 	pip install crypter boto awscli
 
+ADD root/ /root/
+
 # Runtime decryption services - see https://github.com/barchart/crypter
 # This will only be mapped for trusted containers
 VOLUME ["/var/run/crypter"]
