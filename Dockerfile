@@ -11,8 +11,10 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Update base packages
 RUN apt-get --yes update && \
-	apt-get --yes install wget tar unzip git python python-pip python-setuptools software-properties-common && \
+	apt-get --yes install wget tar unzip git python python-setuptools software-properties-common && \
 	apt-get clean && \
+	wget https://bootstrap.pypa.io/get-pip.py && \
+	sudo python get-pip.py && \
 	pip install crypter boto awscli
 
 ADD root/ /root/
